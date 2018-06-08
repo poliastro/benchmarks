@@ -1,0 +1,16 @@
+{
+    "examples.time_propagate_iss_one_period": {
+        "code": "def time_propagate_iss_one_period():\n    iss.propagate(iss.period)\n",
+        "goal_time": 2.0,
+        "name": "examples.time_propagate_iss_one_period",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "pretty_name": "examples.time_propagate_iss_one_period",
+        "repeat": 0,
+        "timeout": 60.0,
+        "type": "time",
+        "unit": "seconds"
+    },
+    "version": 1
+}
