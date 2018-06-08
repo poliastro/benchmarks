@@ -1,0 +1,37 @@
+{
+    "commit_hash": "8685e256d459c0dc025dba3af3d5e021492c4c80",
+    "date": 1512710328000,
+    "ended_at": {
+        "examples.time_propagate_iss_one_period": 1528453416000
+    },
+    "env_name": "conda-py3.6-matplotlib2.1-nomkl-numba-numpy1.14-scipy1.0",
+    "params": {
+        "arch": "x86_64",
+        "cpu": "Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz",
+        "machine": "centauri",
+        "matplotlib": "2.1",
+        "nomkl": "",
+        "numba": "",
+        "numpy": "1.14",
+        "os": "Linux 4.13.0-43-generic",
+        "python": "3.6",
+        "ram": "8080116",
+        "scipy": "1.0"
+    },
+    "profiles": {},
+    "python": "3.6",
+    "requirements": {
+        "matplotlib": "2.1",
+        "nomkl": "",
+        "numba": "",
+        "numpy": "1.14",
+        "scipy": "1.0"
+    },
+    "results": {
+        "examples.time_propagate_iss_one_period": 0.00511784000000004
+    },
+    "started_at": {
+        "examples.time_propagate_iss_one_period": 1528453414000
+    },
+    "version": 1
+}
