@@ -2,7 +2,7 @@
     "commit_hash": "b659a947d9960e13ca844e7d049206e680fb0b8a",
     "date": 1527063963000,
     "ended_at": {
-        "examples.time_propagate_iss_one_period": 1528444667000
+        "examples.time_propagate_iss_one_period": 1528452064000
     },
     "env_name": "conda-py3.6-matplotlib2.1-nomkl-numba-numpy1.11-scipy1.0",
     "params": {
@@ -28,10 +28,10 @@
         "scipy": "1.0"
     },
     "results": {
-        "examples.time_propagate_iss_one_period": 0.007984777740000002
+        "examples.time_propagate_iss_one_period": 0.00734642622
     },
     "started_at": {
-        "examples.time_propagate_iss_one_period": 1528444663000
+        "examples.time_propagate_iss_one_period": 1528452060000
     },
     "version": 1
 }
