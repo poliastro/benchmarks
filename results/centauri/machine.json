@@ -1,0 +1,10 @@
+{
+    "centauri": {
+        "arch": "x86_64",
+        "cpu": "Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz",
+        "machine": "centauri",
+        "os": "Linux 4.13.0-43-generic",
+        "ram": "8080116"
+    },
+    "version": 1
+}
