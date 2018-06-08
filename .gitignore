@@ -30,6 +30,7 @@ distribute-*.tar.gz
 env
 html
 astropy
+poliastro
 
 # Other
 .cache
