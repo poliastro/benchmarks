@@ -1,0 +1,60 @@
+{
+    "benchmark_version": {
+        "examples.time_propagate_iss_one_period": "b5069795c267b83f7b30347c17a71f0198804752d68e6c4178157b639aff0d36"
+    },
+    "commit_hash": "0321b2aea97d6c4c992d9daa6ce73b023b9ace62",
+    "date": 1530178639000,
+    "ended_at": {
+        "examples.time_propagate_iss_one_period": 1530776023000
+    },
+    "env_name": "conda-py3.6-matplotlib2.1-nomkl-numba-numpy1.14-scipy1.0",
+    "params": {
+        "arch": "x86_64",
+        "cpu": "Intel(R) Atom(TM) CPU N2800   @ 1.86GHz",
+        "machine": "ks1",
+        "matplotlib": "2.1",
+        "nomkl": "",
+        "numba": "",
+        "numpy": "1.14",
+        "os": "Linux 4.15.0-23-generic",
+        "python": "3.6",
+        "ram": "4022268",
+        "scipy": "1.0"
+    },
+    "profiles": {},
+    "python": "3.6",
+    "requirements": {
+        "matplotlib": "2.1",
+        "nomkl": "",
+        "numba": "",
+        "numpy": "1.14",
+        "scipy": "1.0"
+    },
+    "results": {
+        "examples.time_propagate_iss_one_period": {
+            "result": [
+                0.07024121949999973
+            ],
+            "stats": [
+                {
+                    "ci_99": [
+                        0.07016302675000041,
+                        0.07170791024999978
+                    ],
+                    "max": 0.0728675059999997,
+                    "mean": 0.07056672644444441,
+                    "min": 0.07015919400000037,
+                    "n": 9,
+                    "q_25": 0.07018616449999993,
+                    "q_75": 0.07046791700000021,
+                    "std": 0.0008236633267598025,
+                    "systematic": 0.0
+                }
+            ]
+        }
+    },
+    "started_at": {
+        "examples.time_propagate_iss_one_period": 1530776014000
+    },
+    "version": 1
+}
