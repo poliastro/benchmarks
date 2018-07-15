@@ -1,0 +1,53 @@
+{
+    "benchmark_version": {
+        "examples.time_propagate_iss_one_period": "b5069795c267b83f7b30347c17a71f0198804752d68e6c4178157b639aff0d36"
+    },
+    "commit_hash": "cfbf32ba6f347c23f389082dc505df4dbb22f20c",
+    "date": 1485735181000,
+    "ended_at": {
+        "examples.time_propagate_iss_one_period": 1531688494000
+    },
+    "env_name": "conda-py3.6-numba0.39-numpy1.14",
+    "params": {
+        "arch": "x86_64",
+        "cpu": "Intel(R) Atom(TM) CPU N2800   @ 1.86GHz",
+        "machine": "ks1",
+        "numba": "0.39",
+        "numpy": "1.14",
+        "os": "Linux 4.15.0-23-generic",
+        "python": "3.6",
+        "ram": "4022268"
+    },
+    "profiles": {},
+    "python": "3.6",
+    "requirements": {
+        "numba": "0.39",
+        "numpy": "1.14"
+    },
+    "results": {
+        "examples.time_propagate_iss_one_period": {
+            "result": [
+                0.022508007000000774
+            ],
+            "stats": [
+                {
+                    "ci_99": [
+                        0.022407007719125373,
+                        0.022737390999999718
+                    ],
+                    "max": 0.022737390999999718,
+                    "mean": 0.022528295142857147,
+                    "min": 0.022425416999999115,
+                    "n": 7,
+                    "q_25": 0.02246378650000036,
+                    "q_75": 0.02254983899999985,
+                    "std": 9.614475078524121e-05
+                }
+            ]
+        }
+    },
+    "started_at": {
+        "examples.time_propagate_iss_one_period": 1531688481000
+    },
+    "version": 1
+}

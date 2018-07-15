@@ -5,7 +5,7 @@
         "number": 0,
         "param_names": [],
         "params": [],
-        "repeat": 0,
+        "repeat": 7,
         "sample_time": 0.1,
         "timeout": 60.0,
         "type": "time",
