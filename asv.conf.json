@@ -3,17 +3,15 @@
     "pythons": ["3.6"],
 
     "environment_type": "conda",
+    "conda_channels": ["conda-forge", "defaults"],
 
     // The matrix of dependencies to test.  Each key is the name of a
     // package (in PyPI) and the values are version numbers.  An empty
     // list indicates to just test against the default (latest)
     // version.
     "matrix": {
-        "numpy": ["1.11", "1.14"],
-        "numba": [],
-        "nomkl": [],
-        "scipy": ["1.0"],
-        "matplotlib": ["2.1"]
+        "numpy": ["1.14"],
+        "numba": ["0.39"]
     },
 
     "dcvs": "git",
