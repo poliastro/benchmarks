@@ -1,0 +1,15 @@
+[
+    {
+        "change_rev": [
+            1167,
+            1169
+        ],
+        "idx": null,
+        "last_err": 0.000314785472500002,
+        "last_rev": 1362,
+        "last_value": 0.007063884690000002,
+        "name": "examples.time_propagate_iss_one_period",
+        "pretty_name": "examples.time_propagate_iss_one_period",
+        "prev_value": 0.0025812379999998747
+    }
+]

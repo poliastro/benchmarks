@@ -1,0 +1,28 @@
+{
+    "regressions": [
+        [
+            "examples.time_propagate_iss_one_period",
+            "graphs/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz/machine-centauri/matplotlib-2.1/nomkl/numba/numpy-1.14/os-Linux 4.13.0-43-generic/python-3.6/ram-8080116/scipy-1.0/examples.time_propagate_iss_one_period.json",
+            {
+                "cpu": "Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz",
+                "machine": "centauri",
+                "numpy": "1.14",
+                "os": "Linux 4.13.0-43-generic",
+                "ram": "8080116"
+            },
+            null,
+            [
+                [
+                    [
+                        null,
+                        1177,
+                        0.002786824500000007,
+                        0.007646322690000002
+                    ]
+                ],
+                0.007646322690000002,
+                0.002786824500000007
+            ]
+        ]
+    ]
+}
