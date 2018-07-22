@@ -5,7 +5,7 @@
     "commit_hash": "f2bc9869c4e666e6f97af02659d17cb97b517dab",
     "date": 1485734426000,
     "ended_at": {
-        "examples.time_propagate_iss_one_period": 1531688552000
+        "examples.time_propagate_iss_one_period": 1532205453000
     },
     "env_name": "conda-py3.6-numba0.39-numpy1.14",
     "params": {
@@ -27,27 +27,28 @@
     "results": {
         "examples.time_propagate_iss_one_period": {
             "result": [
-                0.021145426000000356
+                0.021224045500000344
             ],
             "stats": [
                 {
                     "ci_99": [
-                        0.021077726555887445,
-                        0.02130495599999982
+                        0.02117483600000014,
+                        0.021379785000000595
                     ],
-                    "max": 0.02130495599999982,
-                    "mean": 0.02117961828571424,
-                    "min": 0.021084540000000374,
-                    "n": 7,
-                    "q_25": 0.021135971999999725,
-                    "q_75": 0.021225230999999845,
-                    "std": 7.362264935981266e-05
+                    "max": 0.021379785000000595,
+                    "mean": 0.021245815699999858,
+                    "min": 0.02117483600000014,
+                    "number": 1,
+                    "q_25": 0.021207143499999415,
+                    "q_75": 0.021273352999999773,
+                    "repeat": 10,
+                    "std": 5.7116434874954176e-05
                 }
             ]
         }
     },
     "started_at": {
-        "examples.time_propagate_iss_one_period": 1531688539000
+        "examples.time_propagate_iss_one_period": 1532205440000
     },
     "version": 1
 }
