@@ -8,7 +8,7 @@ These benchmarks track the performance of various features in poliastro
 *over time*.
 
 To view them, visit `this site
-<http://poliastro.github.io/poliastro-benchmarks>`__.
+<https://poliastro.github.io/benchmarks/>`__.
 
 The benchmarks are run using `airspeed velocity
 <https://asv.readthedocs.io>`__.
