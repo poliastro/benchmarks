@@ -1,6 +1,6 @@
 {
     // The versions of Python to test against
-    "pythons": ["3.6"],
+    "pythons": ["3.6", "3.7", "3.8"],
 
     "environment_type": "conda",
     "conda_channels": ["conda-forge", "defaults"],
@@ -9,10 +9,10 @@
     // package (in PyPI) and the values are version numbers.  An empty
     // list indicates to just test against the default (latest)
     // version.
-    "matrix": {
-        "numpy": ["1.14"],
-        "numba": ["0.39"]
-    },
+    // "matrix": {
+    //     "numpy": [],
+    //     "numba": [],
+    // },
 
     "dcvs": "git",
 
@@ -27,6 +27,13 @@
 
     "show_commit_url": "http://github.com/poliastro/poliastro/commit/",
 
-    "version": 1
+    "version": 1,
+
+    // "install_command": ["python -m pip install flit", "in-dir={env_dir} python -m flit install"],
+    "install_command": ["conda install -c conda-forge poliastro"],
+
+    "uninstall_command": ["conda uninstall poliastro"],
+
+    "build_command": ["python -m pip install flit pygments", "python -c \"import os; print(os.getcwd(), os.listdir())\"", "python -m flit build"],
 
 }
