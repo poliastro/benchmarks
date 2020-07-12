@@ -10,9 +10,9 @@ from poliastro.twobody.propagation import cowell
 from poliastro.core.elements import rv2coe
 from poliastro.ephem import build_ephem_interpolant
 
-from poliastro.core.util import norm
+# from poliastro.core.util import norm
 from poliastro.core.perturbations import (
-    J2_perturbation, J3_perturbation, atmospheric_drag, third_body, radiation_pressure
+    J2_perturbation, J3_perturbation, third_body, radiation_pressure, #atmospheric_drag
 )
 from poliastro.bodies import Earth, Moon, Sun
 from poliastro.twobody import Orbit
@@ -67,5 +67,6 @@ class drag():
         self.rho0 = Earth.rho0.to(u.kg / u.km**3).value  # kg/km^3
         self.H0 = Earth.H0.to(u.km).value
         self.tof = 60  # s
-    def time_atmospheric_drag(self):
-        cowell(self.orbit, self.tof, ad=atmospheric_drag, R=self.R, C_D=self.C_D, A=self.A, m=self.m, H0=self.H0, rho0=self.rho0)
+        
+    # def time_atmospheric_drag(self):
+    #     cowell(self.orbit, self.tof, ad=atmospheric_drag, R=self.R, C_D=self.C_D, A=self.A, m=self.m, H0=self.H0, rho0=self.rho0)
