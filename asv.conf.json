@@ -1,15 +1,15 @@
 {
+    "version": 1,
+
     // The versions of Python to test against
-    // "pythons": ["3.7", "3.8"],
-    "pythons": ["3.8"],
+    "pythons": ["3.8"], // Python 3.7 included below with extra cached_property dependency
 
     // "environment_type": "virtualenv",
-    "environment_type": "conda",
-    "conda_channels": ["conda-forge", "defaults"],
+    "environment_type": "virtualenv",
 
     // The matrix of dependencies to test.  Each key is the name of a
     // package (in PyPI) and the values are version numbers.  An empty
-    // list indicates to just test against the default (latest)
+    // string indicates to just test against the default (latest)
     // version.
     "matrix": {
         "numpy": "",
@@ -23,38 +23,27 @@
         "matplotlib": "",
     },
 
-    // "include": [
-    //     {"python": 3.7, 
-    //         "numpy": "",
-    //         "numba": "",
-    //         "astropy": "",
-    //         "astroquery": "",
-    //         "jplephem": "",
-    //         "pandas": "",
-    //         "plotly": "",
-    //         "scipy": "",
-    //         "matplotlib": "",
-    //         "pip+cached_property": "",
-    //     },
-    //     {"python": 3.8, 
-    //         "numpy": "",
-    //         "numba": "",
-    //         "astropy": "",
-    //         "astroquery": "",
-    //         "jplephem": "",
-    //         "pandas": "",
-    //         "plotly": "",
-    //         "scipy": "",
-    //         "matplotlib": "",
-    //     },
-    // ],
+    "include": [
+        {
+            "python": "3.7", 
+            "numpy": "",
+            "numba": "",
+            "astropy": "",
+            "astroquery": "",
+            "jplephem": "",
+            "pandas": "",
+            "plotly": "",
+            "scipy": "",
+            "matplotlib": "",
+            "pip+cached_property": "",
+        },
+    ],
 
     "dcvs": "git",
 
     // The git URL to the project being tested. Comment the first line
     // and uncomment and edit the second if you are testing local changes.
     "repo": "https://github.com/poliastro/poliastro.git",
-    //"repo": "/your/local/repository/",
 
     "project": "poliastro",
 
@@ -62,23 +51,15 @@
 
     "show_commit_url": "http://github.com/poliastro/poliastro/commit/",
 
-    "version": 1,
 
     "install_command": [
         "python -m pip install flit wheel",
-        // "python -c \"import os; print(os.getcwd(), os.listdir())\"",
-        // "python -c \"import os; print(os.getcwd(), os.listdir())\" && python -m flit install"
         "python -m flit install",
     ],
-    // "install_command": ["conda install -c conda-forge poliastro"],
-
-    // "uninstall_command": ["pip uninstall poliastro"],
-
+    
     "build_command": [
         "python -m pip install flit wheel pygments", 
-        // "python -c \"import os; print(os.getcwd(), os.listdir())\"", 
-        // "python -c \"import os; print(os.getcwd(), os.listdir())\" && python -m flit -f pyproject.toml build --no-setup-py"],
-        "python -m flit -f pyproject.toml build --no-setup-py"],
+        "python -m flit build --no-setup-py"],
 
     "build_cache_size": 25,
 }

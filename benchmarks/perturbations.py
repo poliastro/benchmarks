@@ -10,16 +10,15 @@ from poliastro.twobody.propagation import cowell
 from poliastro.core.elements import rv2coe
 from poliastro.ephem import build_ephem_interpolant
 
-# from poliastro.core.util import norm
 from poliastro.core.perturbations import (
-    J2_perturbation, J3_perturbation, third_body, radiation_pressure, #atmospheric_drag
+    J2_perturbation, J3_perturbation, third_body, radiation_pressure, atmospheric_drag_exponential
 )
 from poliastro.bodies import Earth, Moon, Sun
-from poliastro.twobody import Orbit
 
 
-class J2_propagation():
+class J2_Propagation:
     def setup(self):
+        from poliastro.twobody import Orbit
         self.r0 = np.array([-2384.46, 5729.01, 3050.46])  # km
         self.v0 = np.array([-7.36138, -2.98997, 1.64354])  # km/s
         self.k = Earth.k.to(u.km**3 / u.s**2).value
@@ -31,8 +30,9 @@ class J2_propagation():
         cowell(self.orbit, self.tof, ad=J2_perturbation, J2=Earth.J2.value, R=Earth.R.to(u.km).value)
 
 
-class J3_propagation():
+class J3_Propagation:
     def setup(self):
+        from poliastro.twobody import Orbit
         self.a_ini = 8970.667 * u.km
         self.ecc_ini = 0.25 * u.one
         self.raan_ini = 1.047 * u.rad
@@ -46,12 +46,14 @@ class J3_propagation():
         self.tof = (1.0 * u.min).to(u.s).value
         self.a_J2J3 = lambda t0, u_, k_: J2_perturbation(t0, u_, k_, J2=Earth.J2.value, R=Earth.R.to(u.km).value) + \
                                          J3_perturbation(t0, u_, k_, J3=Earth.J3.value, R=Earth.R.to(u.km).value)
+    
     def time_J3_propagation(self):
         cowell(self.orbit, self.tof, ad=self.a_J2J3, rtol=1e-8)
 
 
-class drag():
+class AtmosphericDrag:
     def setup(self):
+        from poliastro.twobody import Orbit
         self.R = Earth.R.to(u.km).value
         self.k = Earth.k.to(u.km**3 / u.s**2).value
 
@@ -68,5 +70,5 @@ class drag():
         self.H0 = Earth.H0.to(u.km).value
         self.tof = 60  # s
         
-    # def time_atmospheric_drag(self):
-    #     cowell(self.orbit, self.tof, ad=atmospheric_drag, R=self.R, C_D=self.C_D, A=self.A, m=self.m, H0=self.H0, rho0=self.rho0)
+    def time_atmospheric_drag_exponential(self):
+        cowell(self.orbit, self.tof, ad=atmospheric_drag_exponential, R=self.R, C_D=self.C_D, A=self.A, m=self.m, H0=self.H0, rho0=self.rho0)
