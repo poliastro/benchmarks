@@ -14,6 +14,7 @@ from poliastro.core.perturbations import (
     J2_perturbation, J3_perturbation, third_body, radiation_pressure, atmospheric_drag_exponential
 )
 from poliastro.bodies import Earth, Moon, Sun
+from poliastro.constants import rho0_earth
 
 
 class J2_Propagation:
@@ -26,6 +27,7 @@ class J2_Propagation:
         self.orbit = Orbit.from_vectors(Earth, self.r0 * u.km, self.v0 * u.km / u.s)
 
         self.tof = (1.0 * u.min).to(u.s).value
+        
     def time_J2_propagation(self):
         cowell(self.orbit, self.tof, ad=J2_perturbation, J2=Earth.J2.value, R=Earth.R.to(u.km).value)
 
@@ -66,9 +68,9 @@ class AtmosphericDrag:
         self.B = self.C_D * self.A / self.m
 
         # parameters of the atmosphere
-        self.rho0 = Earth.rho0.to(u.kg / u.km**3).value  # kg/km^3
+        self.rho0 = rho0_earth.to(u.kg / u.km ** 3)  # kg/km^3
         self.H0 = Earth.H0.to(u.km).value
         self.tof = 60  # s
         
     def time_atmospheric_drag_exponential(self):
-        cowell(self.orbit, self.tof, ad=atmospheric_drag_exponential, R=self.R, C_D=self.C_D, A=self.A, m=self.m, H0=self.H0, rho0=self.rho0)
+        cowell(self.orbit.attractor.k, self.orbit.r, self.orbit.v, self.tof.reshape(-1), ad=atmospheric_drag_exponential, R=self.R, C_D=self.C_D, A=self.A, m=self.m, H0=self.H0, rho0=self.rho0)
