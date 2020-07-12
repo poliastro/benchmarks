@@ -35,7 +35,7 @@
             "plotly": "",
             "scipy": "",
             "matplotlib": "",
-            "pip+cached_property": "",
+            "cached_property": "",
         },
     ],
 
