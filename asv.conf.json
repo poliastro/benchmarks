@@ -4,7 +4,6 @@
     // The versions of Python to test against
     "pythons": ["3.8"], // Python 3.7 included below with extra cached_property dependency
 
-    // "environment_type": "virtualenv",
     "environment_type": "virtualenv",
 
     // The matrix of dependencies to test.  Each key is the name of a
@@ -15,11 +14,11 @@
         "numpy": "",
         "numba": "",
         "astropy": "",
+        "scipy": "",
         "astroquery": "",
         "jplephem": "",
         "pandas": "",
         "plotly": "",
-        "scipy": "",
         "matplotlib": "",
     },
 
@@ -29,11 +28,11 @@
             "numpy": "",
             "numba": "",
             "astropy": "",
+            "scipy": "",
             "astroquery": "",
             "jplephem": "",
             "pandas": "",
             "plotly": "",
-            "scipy": "",
             "matplotlib": "",
             "cached_property": "",
         },
@@ -59,7 +58,8 @@
     
     "build_command": [
         "python -m pip install flit wheel pygments", 
-        "python -m flit build --no-setup-py"],
+        "python -m flit build --no-setup-py",
+    ],
 
     "build_cache_size": 25,
 }
