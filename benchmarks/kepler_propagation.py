@@ -4,7 +4,7 @@ from poliastro.bodies import Earth
 from poliastro.twobody.propagation import cowell, vallado, farnocchia
 
 
-class Propagation:
+class KeplerPropagation:
 
     params = (["cowell", "vallado", "farnocchia"], [0.0, 0.5, 0.995, 1.5, 10.0, 100.0])
     param_names = ["method", "ecc"]
